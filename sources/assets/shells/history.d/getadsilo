@@ -1,1 +1,2 @@
-alias getadsilo=GetADSILO
+GetADSILO -u '$USERNAME' -p '$PASSWORD' -d '$DOMAIN' --dc-host '$DC_HOST' -v
+getadsilo -u '$USERNAME' -p '$PASSWORD' -d '$DOMAIN' --dc-host '$DC_HOST' -v
