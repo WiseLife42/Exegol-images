@@ -1,0 +1,2 @@
+GetADPSO -u '$USERNAME' -p '$PASSWORD' -d '$DOMAIN' --dc-host '$DC_HOST' -v
+getadpso -u '$USERNAME' -p '$PASSWORD' -d '$DOMAIN' --dc-host '$DC_HOST' -v
