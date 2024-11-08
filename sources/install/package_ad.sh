@@ -1395,6 +1395,24 @@ function install_adminer() {
     add-to-list "AD-miner,https://github.com/Mazars-Tech/AD_Miner,Active Directory audit tool that leverages cypher queries."
 }
 
+function install_getadpso() {
+    colorecho "Installing getadpso"
+    pipx install git+https://github.com/WiseLife42/GetADPSO
+    add-aliases getadpso
+    add-history getadpso
+    add-test-command "getadpso -h"
+    add-to-list "GetADPSO,https://github.com/WiseLife42/GetADPSO,Displays fine-grained password policies (FGPPs) applied to users and groups in Active Directory."
+}
+
+function install_getadsilo() {
+    colorecho "Installing getadsilo"
+    pipx install git+https://github.com/WiseLife42/GetADSILO
+    add-aliases getadsilo
+    add-history getadsilo
+    add-test-command "getadsilo -h"
+    add-to-list "GetADSILO,https://github.com/WiseLife42/GetADSILO,Active Directory to list users and computers associated with authentication silos."
+}
+
 # Package dedicated to internal Active Directory tools
 function package_ad() {
     set_env
@@ -1500,6 +1518,8 @@ function package_ad() {
     install_smbclientng
     install_conpass                # Python tool for continuous password spraying taking into account the password policy.
     install_adminer
+    install_getadpso
+    install_getadsilo
     end_time=$(date +%s)
     local elapsed_time=$((end_time - start_time))
     colorecho "Package ad completed in $elapsed_time seconds."
